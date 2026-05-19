@@ -1,0 +1,5 @@
+"Name","InterfaceDescription","LinkSpeed"
+"Ethernet","Realtek PCIe GbE Family Controller","100 Mbps"
+"Radmin VPN","Famatech Radmin VPN Ethernet Adapter","100 Mbps"
+"VMware Network Adapter VMnet1","VMware Virtual Ethernet Adapter for VMnet1","100 Mbps"
+"VMware Network Adapter VMnet8","VMware Virtual Ethernet Adapter for VMnet8","100 Mbps"

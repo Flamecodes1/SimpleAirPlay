@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  xmlns:desktop2="http://schemas.microsoft.com/appx/manifest/desktop/windows10/2"
+  IgnorableNamespaces="uap rescap desktop2">
+
+  <Identity
+    Name="SimpleAirPlay"
+    Publisher="CN=SimpleAirPlay"
+    Version="5.0.0.0"
+    ProcessorArchitecture="x64" />
+
+  <mp:PhoneIdentity PhoneProductId="9CE8E981-8EB9-477A-BD58-7E3E4D6ADB54" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>Simple AirPlay</DisplayName>
+    <PublisherDisplayName>Simple AirPlay</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+    <Description>Premium AirPlay Receiver for Windows — Stream audio, video, and screen mirror from your iPhone/iPad/Mac to your Windows PC.</Description>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.19041.0" MaxVersionTested="10.0.26100.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="de-DE"/>
+    <Resource Language="en-US"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+      Executable="SimpleAirPlay.exe"
+      EntryPoint="Windows.FullTrustApplication">
+
+      <uap:VisualElements
+        DisplayName="Simple AirPlay"
+        Description="Premium AirPlay Receiver"
+        BackgroundColor="#1E1E1E"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo"/>
+            <uap:ShowOn Tile="wide310x150Logo"/>
+            <uap:ShowOn Tile="square310x310Logo"/>
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#1E1E1E"/>
+      </uap:VisualElements>
+
+      <!-- Firewall Rules — auto-created on install, auto-removed on uninstall -->
+      <Extensions>
+        <desktop2:Extension Category="windows.firewallRules">
+          <desktop2:FirewallRules Executable="engine\bin\uxplay.exe">
+            <!-- mDNS / Bonjour discovery -->
+            <desktop2:Rule Direction="in" IPProtocol="UDP" LocalPortMin="5353" LocalPortMax="5353" Profile="all"/>
+            <!-- AirPlay TCP ports -->
+            <desktop2:Rule Direction="in" IPProtocol="TCP" LocalPortMin="7000" LocalPortMax="7001" Profile="all"/>
+            <desktop2:Rule Direction="in" IPProtocol="TCP" LocalPortMin="7100" LocalPortMax="7100" Profile="all"/>
+            <!-- AirPlay UDP ports -->
+            <desktop2:Rule Direction="in" IPProtocol="UDP" LocalPortMin="6000" LocalPortMax="6001" Profile="all"/>
+            <desktop2:Rule Direction="in" IPProtocol="UDP" LocalPortMin="7011" LocalPortMax="7011" Profile="all"/>
+          </desktop2:FirewallRules>
+        </desktop2:Extension>
+      </Extensions>
+
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <!-- Full trust for Desktop Bridge (run uxplay.exe subprocess) -->
+    <rescap:Capability Name="runFullTrust" />
+    <!-- Network access for AirPlay streaming -->
+    <Capability Name="internetClient" />
+    <Capability Name="privateNetworkClientServer" />
+  </Capabilities>
+
+</Package>

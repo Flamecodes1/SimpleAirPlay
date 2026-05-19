@@ -1,0 +1,174 @@
+<Window x:Class="SimpleAirPlay.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Simple AirPlay" 
+        Width="380" SizeToContent="Height"
+        WindowStyle="None" AllowsTransparency="True"
+        Background="Transparent"
+        WindowStartupLocation="CenterScreen"
+        Topmost="True"
+        ShowInTaskbar="False"
+        TextOptions.TextFormattingMode="Display"
+        TextOptions.TextRenderingMode="ClearType">
+
+    <Window.Resources>
+        <!-- Pill Button Template (shared by PiP, Pin buttons) -->
+        <ControlTemplate x:Key="PillButtonTemplate" TargetType="Button">
+            <Border x:Name="border" Background="#15FFFFFF" CornerRadius="15">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="border"
+                                    Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                    To="#35FFFFFF" Duration="0:0:0.2"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                    <Trigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="border"
+                                    Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                    To="#15FFFFFF" Duration="0:0:0.25"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.ExitActions>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <!-- Close Button Template (red hover) -->
+        <ControlTemplate x:Key="CloseButtonTemplate" TargetType="Button">
+            <Border x:Name="border" Background="Transparent" CornerRadius="15">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="border"
+                                    Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                    To="#25FF4444" Duration="0:0:0.15"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                    <Trigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="border"
+                                    Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                    To="Transparent" Duration="0:0:0.2"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.ExitActions>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
+
+    <!-- Main Pill Container -->
+    <Border x:Name="MainBorder" CornerRadius="35" 
+            Background="#E6000000" 
+            BorderBrush="#33FFFFFF" BorderThickness="1"
+            Margin="15"
+            ToolTip="Mausrad drehen, um die Windows-Lautstärke anzupassen">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="25" ShadowDepth="5" Opacity="0.6" Color="Black"/>
+        </Border.Effect>
+
+        <StackPanel>
+            <!-- ============ TOP PILL BAR ============ -->
+            <Grid x:Name="TopGrid" Height="70" Background="Transparent"
+                  MouseLeftButtonDown="TopGrid_MouseLeftButtonDown">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- AirPlay Icon -->
+                <Path x:Name="AirPlayIcon" Grid.Column="0"
+                      Data="M 4,4 L 28,4 C 29.1,4 30,4.9 30,6 L 30,22 C 30,23.1 29.1,24 28,24 L 21,24 L 16,18 L 11,24 L 4,24 C 2.9,24 2,23.1 2,22 L 2,6 C 2,4.9 2.9,4 4,4 Z M 16,19 L 23,28 L 9,28 Z"
+                      Fill="White" Width="22" Height="20" Stretch="Uniform"
+                      VerticalAlignment="Center" Margin="25,0,15,0"/>
+
+                <!-- Title + Status -->
+                <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                    <TextBlock x:Name="TitleText" Text="Simple AirPlay"
+                               Foreground="White" FontSize="14" FontWeight="SemiBold"/>
+                    <TextBlock x:Name="StatusText" Text="Bereit"
+                               Foreground="#A0FFFFFF" FontSize="11"/>
+                </StackPanel>
+
+                <!-- PiP Button -->
+                <Button x:Name="PipButton" Grid.Column="2"
+                        Content="Pille" Foreground="#00D4FF"
+                        FontSize="11" FontWeight="Bold" Cursor="Hand"
+                        Margin="0,0,10,0" Width="40" Height="30" BorderThickness="0"
+                        ToolTip="Video in der Pille oder im Vollbild anzeigen"
+                        Template="{StaticResource PillButtonTemplate}"
+                        Click="PipButton_Click"/>
+
+                <!-- Pin/Topmost Button -->
+                <Button x:Name="TopButton" Grid.Column="3"
+                        Content="Pin" Foreground="#00D4FF"
+                        FontSize="11" FontWeight="Bold" Cursor="Hand"
+                        Margin="0,0,10,0" Width="45" Height="30" BorderThickness="0"
+                        ToolTip="Fenster immer im Vordergrund behalten"
+                        Template="{StaticResource PillButtonTemplate}"
+                        Click="TopButton_Click"/>
+
+                <!-- Close Button -->
+                <Button x:Name="CloseButton" Grid.Column="4"
+                        Content="✕" Foreground="#66FFFFFF"
+                        FontSize="12" Cursor="Hand"
+                        Width="30" Height="30" BorderThickness="0"
+                        Margin="0,0,15,0"
+                        Template="{StaticResource CloseButtonTemplate}"
+                        Click="CloseButton_Click"/>
+            </Grid>
+
+            <!-- ============ VIDEO PLACEHOLDER ============ -->
+            <Border x:Name="VideoPlaceholder" Height="0"
+                    Margin="20,0,20,20" CornerRadius="15"
+                    Background="#0AFFFFFF"/>
+
+            <!-- ============ BOTTOM PLAYER PANEL ============ -->
+            <Grid x:Name="PlayerPanel" Visibility="Collapsed" Opacity="0"
+                  Height="70" Margin="20,0,20,15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Cover Art -->
+                <Border Grid.Column="0" Width="55" Height="55" CornerRadius="12"
+                        Background="#15FFFFFF" ClipToBounds="True">
+                    <Image x:Name="CoverImage" Stretch="UniformToFill"
+                           Width="55" Height="55"/>
+                </Border>
+
+                <!-- Track Info -->
+                <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="12,0,0,0">
+                    <TextBlock x:Name="TrackTitle" Foreground="White"
+                               FontSize="13" FontWeight="SemiBold"
+                               TextTrimming="CharacterEllipsis"/>
+                    <TextBlock x:Name="TrackArtist" Foreground="#99FFFFFF"
+                               FontSize="11" Margin="0,2,0,0"
+                               TextTrimming="CharacterEllipsis"/>
+                    <TextBlock x:Name="TrackAlbum" Foreground="#66FFFFFF"
+                               FontSize="10" Margin="0,2,0,0"
+                               TextTrimming="CharacterEllipsis"
+                               Visibility="Collapsed"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Border>
+</Window>

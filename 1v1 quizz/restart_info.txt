@@ -1,0 +1,49 @@
+=== Event 1074 (Shutdown/Restart Reason) - Yesterday 28.02. ===
+23:59:30 | Type: unknown
+  MSG: Vom Prozess "C:\WINDOWS\system32\winlogon.exe (FLAMES-PC)" wurde auf Anforderung des Benutzers "Flames-Pc\fritz" das Ereignis "neu starten" f?r den Computer "FLAMES-PC" aus folgendem Grund initiiert: 
+23:58:32 | Type: unknown
+  MSG: Vom Prozess "C:\WINDOWS\system32\winlogon.exe (FLAMES-PC)" wurde auf Anforderung des Benutzers "Flames-Pc\fritz" das Ereignis "neu starten" f?r den Computer "FLAMES-PC" aus folgendem Grund initiiert: 
+23:57:42 | Type: unknown
+  MSG: Vom Prozess "C:\WINDOWS\system32\winlogon.exe (FLAMES-PC)" wurde auf Anforderung des Benutzers "Flames-Pc\fritz" das Ereignis "neu starten" f?r den Computer "FLAMES-PC" aus folgendem Grund initiiert: 
+23:56:44 | Type: unknown
+  MSG: Vom Prozess "C:\WINDOWS\system32\winlogon.exe (FLAMES-PC)" wurde auf Anforderung des Benutzers "Flames-Pc\fritz" das Ereignis "neu starten" f?r den Computer "FLAMES-PC" aus folgendem Grund initiiert: 
+23:54:51 | Type: unknown
+  MSG: Vom Prozess "C:\WINDOWS\system32\winlogon.exe (FLAMES-PC)" wurde auf Anforderung des Benutzers "Flames-Pc\fritz" das Ereignis "neu starten" f?r den Computer "FLAMES-PC" aus folgendem Grund initiiert: 
+23:54:01 | Type: unknown
+  MSG: Vom Prozess "C:\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe (FLAMES-PC)" wurde auf Anforderung des Benutzers "Flames-Pc\fritz" das Ereignis "
+23:38:53 | Type: unknown
+  MSG: Vom Prozess "C:\WINDOWS\system32\winlogon.exe (FLAMES-PC)" wurde auf Anforderung des Benutzers "NT-AUTORIT?T\SYSTEM" das Ereignis "neu starten" f?r den Computer "FLAMES-PC" aus folgendem Grund initiie
+23:33:31 | Type: unknown
+  MSG: Vom Prozess "C:\WINDOWS\system32\winlogon.exe (FLAMES-PC)" wurde auf Anforderung des Benutzers "NT-AUTORIT?T\SYSTEM" das Ereignis "Ausschalten" f?r den Computer "FLAMES-PC" aus folgendem Grund initiie
+23:32:46 | Type: unknown
+  MSG: Vom Prozess "C:\WINDOWS\system32\winlogon.exe (FLAMES-PC)" wurde auf Anforderung des Benutzers "NT-AUTORIT?T\SYSTEM" das Ereignis "Ausschalten" f?r den Computer "FLAMES-PC" aus folgendem Grund initiie
+23:32:06 | Type: unknown
+  MSG: Vom Prozess "C:\WINDOWS\system32\winlogon.exe (FLAMES-PC)" wurde auf Anforderung des Benutzers "NT-AUTORIT?T\SYSTEM" das Ereignis "Ausschalten" f?r den Computer "FLAMES-PC" aus folgendem Grund initiie
+23:30:09 | Type: unknown
+  MSG: Vom Prozess "C:\WINDOWS\system32\winlogon.exe (FLAMES-PC)" wurde auf Anforderung des Benutzers "NT-AUTORIT?T\SYSTEM" das Ereignis "Ausschalten" f?r den Computer "FLAMES-PC" aus folgendem Grund initiie
+23:29:33 | Type: unknown
+  MSG: Vom Prozess "C:\WINDOWS\system32\winlogon.exe (FLAMES-PC)" wurde auf Anforderung des Benutzers "NT-AUTORIT?T\SYSTEM" das Ereignis "Ausschalten" f?r den Computer "FLAMES-PC" aus folgendem Grund initiie
+23:28:12 | Type: unknown
+  MSG: Vom Prozess "C:\WINDOWS\system32\winlogon.exe (FLAMES-PC)" wurde auf Anforderung des Benutzers "NT-AUTORIT?T\SYSTEM" das Ereignis "Ausschalten" f?r den Computer "FLAMES-PC" aus folgendem Grund initiie
+23:26:35 | Type: unknown
+  MSG: Vom Prozess "C:\WINDOWS\system32\winlogon.exe (FLAMES-PC)" wurde auf Anforderung des Benutzers "NT-AUTORIT?T\SYSTEM" das Ereignis "Ausschalten" f?r den Computer "FLAMES-PC" aus folgendem Grund initiie
+23:25:50 | Type: unknown
+  MSG: Vom Prozess "C:\WINDOWS\system32\winlogon.exe (FLAMES-PC)" wurde auf Anforderung des Benutzers "NT-AUTORIT?T\SYSTEM" das Ereignis "Ausschalten" f?r den Computer "FLAMES-PC" aus folgendem Grund initiie
+
+=== Event 1074 (Shutdown/Restart Reason) - Today 01.03. ===
+00:09:15 | Type: unknown
+  MSG: Vom Prozess "C:\WINDOWS\system32\winlogon.exe (FLAMES-PC)" wurde auf Anforderung des Benutzers "Flames-Pc\fritz" das Ereignis "neu starten" f?r den Computer "FLAMES-PC" aus folgendem Grund initiiert: 
+00:06:01 | Type: unknown
+  MSG: Vom Prozess "C:\WINDOWS\system32\winlogon.exe (FLAMES-PC)" wurde auf Anforderung des Benutzers "Flames-Pc\fritz" das Ereignis "neu starten" f?r den Computer "FLAMES-PC" aus folgendem Grund initiiert: 
+00:04:50 | Type: unknown
+  MSG: Vom Prozess "C:\WINDOWS\system32\winlogon.exe (FLAMES-PC)" wurde auf Anforderung des Benutzers "Flames-Pc\fritz" das Ereignis "neu starten" f?r den Computer "FLAMES-PC" aus folgendem Grund initiiert: 
+00:03:36 | Type: unknown
+  MSG: Vom Prozess "C:\WINDOWS\system32\winlogon.exe (FLAMES-PC)" wurde auf Anforderung des Benutzers "Flames-Pc\fritz" das Ereignis "neu starten" f?r den Computer "FLAMES-PC" aus folgendem Grund initiiert: 
+00:01:47 | Type: unknown
+  MSG: Vom Prozess "C:\WINDOWS\system32\winlogon.exe (FLAMES-PC)" wurde auf Anforderung des Benutzers "Flames-Pc\fritz" das Ereignis "neu starten" f?r den Computer "FLAMES-PC" aus folgendem Grund initiiert: 
+00:00:28 | Type: unknown
+  MSG: Vom Prozess "C:\WINDOWS\system32\winlogon.exe (FLAMES-PC)" wurde auf Anforderung des Benutzers "Flames-Pc\fritz" das Ereignis "neu starten" f?r den Computer "FLAMES-PC" aus folgendem Grund initiiert: 
+
+=== Summary ===
+Yesterday (28.02.): Restarts=0, Shutdowns=15
+Today (01.03.): Restarts=0, Shutdowns=6

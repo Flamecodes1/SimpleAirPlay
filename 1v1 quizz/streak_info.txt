@@ -1,0 +1,34 @@
+All shutdown/restart events (chronological):
+
+2026-02-28 23:25:50 | shutdown
+2026-02-28 23:26:35 | shutdown
+2026-02-28 23:28:12 | shutdown
+2026-02-28 23:29:33 | shutdown
+2026-02-28 23:30:09 | shutdown
+2026-02-28 23:32:06 | shutdown
+2026-02-28 23:32:46 | shutdown
+2026-02-28 23:33:31 | shutdown
+2026-02-28 23:38:53 | restart
+2026-02-28 23:54:01 | restart
+2026-02-28 23:54:51 | restart
+2026-02-28 23:56:44 | restart
+2026-02-28 23:57:42 | restart
+2026-02-28 23:58:32 | restart
+2026-02-28 23:59:30 | restart
+2026-03-01 00:00:28 | restart
+2026-03-01 00:01:47 | restart
+2026-03-01 00:03:36 | restart
+2026-03-01 00:04:50 | restart
+2026-03-01 00:06:01 | restart
+2026-03-01 00:09:15 | restart
+2026-03-01 00:27:35 | restart
+2026-03-01 00:28:51 | restart
+2026-03-01 00:29:40 | restart
+2026-03-01 00:30:39 | restart
+2026-03-01 00:31:49 | restart
+
+=== ERGEBNIS ===
+Aktueller Restart-Streak: 18
+Laengster Restart-Streak: 18
+Streak Start: 2026-02-28 23:38:53
+Streak Ende: 2026-03-01 00:31:49

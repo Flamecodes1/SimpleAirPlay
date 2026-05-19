@@ -1,0 +1,26 @@
+# Visual Studio / .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+TestResults/
+
+# Logs
+*.log
+ps_run_log.txt
+ps_crash_log.txt
+uxplay_stdout.txt
+uxplay_stderr.txt
+uxplay_direct_log.txt
+app_debug.txt
+debug_log.txt
+
+# Installer output
+InstallerOutput/
+
+# User specific configuration
+config.ini
+mac.txt
+metadata.txt
+cover.jpg

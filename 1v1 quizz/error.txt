@@ -1,0 +1,29 @@
+﻿Set-NetAdapterAdvanced
+Property : Zugriff 
+verweigert 
+In Zeile:1 Zeichen:1
++ Set-NetAdapterAdvanc
+edProperty -Name 
+'Ethernet' 
+-RegistryKeyword '*EE 
+...
++ ~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+    + CategoryInfo    
+          : Permissi  
+  onDenied: (MSFT_N   
+ etAdapter...A77DD    
+1A30}:...):ROOT/S    
+tandardCi...ertyS    
+ettingData) [Set-    
+NetAdapterAdvance    
+dProperty], CimEx    
+ception
+    + FullyQualifiedE 
+   rrorId : Windows   
+  System Error 5,Se   
+ t-NetAdapterAdvan    
+cedProperty
+ 

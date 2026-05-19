@@ -1,0 +1,11 @@
+  Wiederherzustellende Projekte werden ermittelt...
+  Alle Projekte sind für die Wiederherstellung auf dem neuesten Stand.
+C:\Users\fritz\airplay\UxPlay\SimpleAirPlayApp\MainWindow.xaml(9,9): error MC6024: Für das Stammelement "Window" ist ein x:Class-Attribut erforderlich, damit Ereignishandler in der XAML-Datei unterstützt werden. Entfernen Sie entweder den Ereignishandler für das Closing-Ereignis, oder fügen Sie dem Stammelement ein x:Class-Attribut hinzu. Zeile 9 Position 9. [C:\Users\fritz\airplay\UxPlay\SimpleAirPlayApp\SimpleAirPlay.csproj]
+
+Fehler beim Buildvorgang.
+
+C:\Users\fritz\airplay\UxPlay\SimpleAirPlayApp\MainWindow.xaml(9,9): error MC6024: Für das Stammelement "Window" ist ein x:Class-Attribut erforderlich, damit Ereignishandler in der XAML-Datei unterstützt werden. Entfernen Sie entweder den Ereignishandler für das Closing-Ereignis, oder fügen Sie dem Stammelement ein x:Class-Attribut hinzu. Zeile 9 Position 9. [C:\Users\fritz\airplay\UxPlay\SimpleAirPlayApp\SimpleAirPlay.csproj]
+    0 Warnung(en)
+    1 Fehler
+
+Verstrichene Zeit 00:00:00.85
